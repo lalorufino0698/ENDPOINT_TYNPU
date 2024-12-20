@@ -1,4 +1,4 @@
-import {
+/*import {
   CallHandler,
   ExecutionContext,
   Injectable,
@@ -38,3 +38,4 @@ export class LogginInterceptor implements NestInterceptor {
     return data.ip || 'IP not found'; // Si no existe, poner un valor por defecto
   }
 }
+*/

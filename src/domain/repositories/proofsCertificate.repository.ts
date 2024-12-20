@@ -1,5 +1,5 @@
 import { ProofsCertificateM } from "../entities/proofsCertificate";
 
-export interface proofsCertificateRepository{
+export interface ProofsCertificateRepository{
     certificateRegister(proofsCertificate: ProofsCertificateM): Promise<ProofsCertificateM>;
 }
