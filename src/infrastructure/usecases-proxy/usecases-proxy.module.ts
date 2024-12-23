@@ -4,7 +4,7 @@ import { RepositoriesModule } from '../persistence/repository.module';
 import { DataBaseConstanciasRepository } from '../persistence/repositories/constancias.repository';
 import { LoggerService } from '../config/logger/logger.service';
 import { UseCaseProxy } from './usecases-proxy';
-import { CertificatesCertificateRegisterUseCases } from 'src/application/use-cases/certificatesCertificateRegister.use-cases';
+import { CertificatesCertificateRegisterUseCases } from 'src/application/use-cases/certificatesCertificateRegister/certificatesCertificateRegister.use-cases';
 @Module({
   imports: [
     LoggerModule,
@@ -27,7 +27,7 @@ export class UseCasesProxyModule {
           useFactory: (
             proofsCertificateRepository: DataBaseConstanciasRepository,
             logger: LoggerService
-          ) => new UseCaseProxy(new CertificatesCertificateRegisterUseCases(proofsCertificateRepository, logger))
+          ) => new UseCaseProxy(new CertificatesCertificateRegisterUseCases(proofsCertificateRepository)),
         }
       ],
       exports: [
